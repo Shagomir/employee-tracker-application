@@ -44,18 +44,18 @@ const getRoles = function () {
 
 //function to grab a list of employees from DB
 const getEmployees = function () {
-  let managerList = [];
+  let employeeList = [];
   db.query(`SELECT first_name, last_name FROM employee`, (err, result) => {
     if (err) {
       console.log(err);
     }
     result.forEach((element) => {
-      let managerName = element.first_name + " " + element.last_name;
-      managerList.push(managerName);
+      let employeeName = element.first_name + " " + element.last_name;
+      employeeList.push(employeeName);
     });
-    // console.log(managerList);
+    // console.log(employeeList);
   });
-  return managerList;
+  return employeeList;
 };
 
 //view all depts
@@ -226,8 +226,7 @@ function addEmployee() {
         roleId = result[0].id;
 
         db.query(
-          `SELECT id
-            FROM employee
+          `SELECT id FROM employee
             WHERE CONCAT(employee.first_name, ' ', employee.last_name) LIKE ?`,
           mName,
           (err, result) => {
