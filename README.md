@@ -38,4 +38,11 @@ WHEN I choose to update an employee role
 THEN I am prompted to select an employee to update and their new role and this information is updated in the database
 ```
 
-##
+## Demo
+
+Please see this demo on how to use the application: 
+[Employee Tracker Demo.webm](https://github.com/Shagomir/employee-tracker-application/assets/51217532/4d03c0a1-22fc-4396-9ee8-2a3dc8b67d63)
+
+## Developer Notes
+
+This application was a challenge, but I was able to meet the core requirements and create an application that works well. I would have preferred to do a more modular approach to the app, but ran out of time and had to settle for a single js file. 
